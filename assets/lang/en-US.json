@@ -1,0 +1,250 @@
+{
+  "onPop": {
+    "title": "Are you sure?",
+    "content": "Do you really want to exit the App",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "splach": {
+    "girle": "splachGirleEn.png",
+    "fashionHouseButton": "Fashion House",
+    "userButton": "User",
+    "changeLang": "العربية"
+  },
+  "login": {
+    "welcom": "Welcome",
+    "underWelcom": "Please add your details",
+    "email": "Email address",
+    "password": "Password",
+    "forgetPassword": "Forget Password?",
+    "signIn": "LogIn",
+    "signUp": "Sign Up"
+  },
+  
+  "validators":{
+    "payPackage":"Please select a membership",
+    "nameValidate":"UserName can't be empty",
+    "name":"The name cannot be empty",
+    "price":"Please enter numbers only",
+    "des":"Please enter a dress description",
+    "image":"Please select at least one photo",
+    "emailValidate": "Please, Enter a valid email!",
+    "passwordValidate": "Password must be more than 6 characters!",
+    "mobileValidate": "The 10-digit phone number should start with 05",
+    "empty":"Please complete the required fields",
+    "nullImage":"Please select an image",
+    "wrongCode":"Wrong code",
+    "blocked":"You are blocked, aske the manager"
+
+
+  },
+  "forgetPassword": {
+    "enterEmail": "Enter your Email",
+    "underEnterEmail": "Please enter your email\nto send you an activation code",
+    "confirm": "Confirm"
+  },
+  "confirm": {
+    "enterCode": "Enter the activation code",
+    "underEnter": "The activation code should be sent\nto your email",
+    "reSend": "Resend Code",
+    "code": "Activation Code",
+    "done":"code sent successfully",
+    "confirm": "Confirm"
+  },
+  "newPassword": {
+    "enterNew": "New Password",
+    "underEnter": "Enter the new password",
+    "password": "Password",
+    "confirm": "confirm"
+  },
+  "signUp": {
+    "joinUs": "Join us now",
+    "underJoin": "Enter the requiered data",
+    "name": "Name",
+    "email": "Email",
+    "mobile": "Phone Number",
+    "site": "WebSite Link",
+    "password": "Password",
+    "agree": "Agree to the terms and conditions.",
+    "signUp": "Sign Up",
+    "logIn": "LogIn",
+    "complete": "Please,\ncomplete the following data",
+    "houseImage": "Image of fashion house",
+    "note": "Fashion house description",
+    "girle": "wait_en.png",
+    "hello": "Welcome",
+    "underHello": "The request has been received successfully.\nThe application will be reviewed by\nthe application manager and replied to you as soon as possible"
+  },
+  "bottomBar": {
+    "home": "Home",
+    "orders": "Orders",
+    "profile": "Profile",
+    "more": "More",
+    "fashion":"Fashion"
+  },
+  "home": {
+    "houses": "Fashion Houses",
+    "special": "Special ones",
+    "used": "Used clothes"
+  },
+  "payPackage": {
+    "membership": "membership",
+    "months":"months",
+    "faild":"process faild",
+
+    "header": "Please\nchoose one Membership",
+    "underHeader": "to signUp in Atelier, pay one Membership",
+    "pay": "Pay it",
+    "first": {
+      "name": "Basic",
+      "period": "3 months membership",
+      "cost": "100",
+      "type": "R.S"
+    },
+    "second": {
+      "name": "Administrative",
+      "period": "6 months membership",
+      "cost": "180",
+      "type": "R.S"
+    },
+    "third": {
+      "name": "Distinctive",
+      "period": "12 months membership",
+      "cost": "250",
+      "type": "ٌR.S"
+    }
+  }
+  ,"notifi":{
+    "notifi":"Notifications",
+    "canPay":"Pay now",
+    "accepted":"Your order 2045 has been accepted.",
+    "manager":"New message from the manager",
+    "refused":"Your order 2045 has been canceled.",
+    "why":"Why ?"
+  },"profile":{
+    "all":"Total :",
+    "myProducts":"My products",
+    "edit":"Edit Profile"
+    ,"camera":"Take Picture",
+    "mob":"contact number",
+    "gallery":"Open the gallery"
+    ,"cropper":"Crop the image"
+    ,"save":"Save",
+    "editDress":"Edit Dress",
+    "add":"Add",
+    "dressName":"Ad Name",
+    "dressType":"Type",
+    "dressOre":"Ore",
+    "dressColor":"Color",
+    "dressSize":"Size",
+    "dressPlace":"payment place",
+    "dressPrice":"Price in Saudi riyals",
+    "dressDescrip":"Text description of the product",
+    "dressImages":"Dress photos",
+    "addDress":"Add Dress",
+    "cancel":"Cancel",
+    "changePassword":"Change Password?",
+    "oldPassword":"Old Password",
+    "newPassword":"New Password",
+    "doYou":"Do you want to change\nPassword?"
+ 
+    },
+    "myOrders":{
+      "new":"New",
+      "makeOrder":"Dress Request",
+      "count":"Required quantity",
+      "hint":"Please explain the details of\nyour request",
+      "confirm":"Confirm",
+      "note":"Please enter a description for your order",  
+      "accepted":"Accepted",
+      "reasonR":"Reason for the reject",
+      "reasonN":"Please enter the reason for the reject",
+      "reason":"Please state the reason for the reject",
+      "refused":"Refused"
+      
+      ,"fashion":"Fasion world"
+      ,"paied":"Paied",
+      "edit": "Edit",
+      "rating":"Rating",
+      "loading":"processing...",
+      "comment":"Add Comment",
+      "addRate":"Please add your rating here",
+      "rate":"Rate the order",
+      "pay":"Pay",  
+      "cancelOrder":"Confirm",
+      "back":"Retreat",
+      "sure":"Sure you want to cancel the order?",  
+      "cancel": "Cancel",
+      "notPaied":"Not Paied"
+      ,"orderNo":"Order No."
+,      "accept":"Accept",
+      "reject":"ٌReject"
+  
+    }
+    ,"more":{
+      "new":"New in Fashion",
+      "packages":"Memberships",
+      "about":"About the application",
+      "contact":"Contact Us",
+      "messageh":"Message",
+      "message":"Please enter your message here",
+      "what":"What is Atelier",
+      "how":"How can we help you",
+      "happy":"We are pleased to communicate with you.",  
+      "terms?":"What is the privacy policy",
+      "kind":"Communication type",
+      "text":"The text of the message",
+      "sug":"Suggestion",
+      "report":"Notice",
+      "back":"Back",
+      "start":"The new membership period starts from the date of payment",
+      "current":"Current membership",
+      "date":"Starting date",
+      "history":"Memberships record",  
+      "send":"Send",
+      "repay":"Membership renewal",
+      "other":"Other",  
+      "terms":"Terms and Conditions",
+      "logOut":"sign out"
+    },
+    "myProduct":{
+      "edit":"Edit",
+      "delete":"Delete",
+  "mobile":"Mobile",
+  "descrip":"Description",
+  "dressImages":"Dress photos",
+  "moneyType":"R.S",
+  "delMessage":"Are you sure to delete this product?"
+  ,"allUsed":"Used Clothes"
+  ,"allProviders":"Fashion Houses"
+,"providerHouse":"Fashion house",
+"n":"user",
+"dresses":"Dresses",
+"owner":"The owner of the dress",
+"empty":"No data yet"
+,
+"emptyDress":"There is no dresses yet"
+,
+"orderDress":"Make an order"
+    },
+    "comments":{
+      "send":"Waiting...",
+      "comments":"Comments",
+      "more":"More...",
+      "less":"Less",
+      "add":"Add Comment",
+      "del":"Do you want to delete the comment ?",
+      "yes":"Yes",
+      "no":"No",    
+      "delete":"Deleting...",
+      "addHint":"Write your comment here",
+      "comment":"Comment"
+      ,"view":"View Filter",
+      "all":"All",
+      "empty":"There's no comments"
+      ,"error":"please rate the order"
+
+    
+    }
+    
+}

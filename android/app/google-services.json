@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "538059969080",
+    "firebase_url": "https://atelier-ef966.firebaseio.com",
+    "project_id": "atelier-ef966",
+    "storage_bucket": "atelier-ef966.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:538059969080:android:a45e18d2484aebd43a4ccd",
+        "android_client_info": {
+          "package_name": "com.atelier.atelier"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "538059969080-t00jd8j01tbj0b0ckn8efanuk45hb5bs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLfweZihuiipuqmXvgopZxAQGjcwgP3k0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "538059969080-t00jd8j01tbj0b0ckn8efanuk45hb5bs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>538059969080-n4iu8k230ksgsr7dq1j7ah10jvifita6.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.538059969080-n4iu8k230ksgsr7dq1j7ah10jvifita6</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDJlFw2APL_Gqy3kz40yTjCbBXLg-5yCPM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>538059969080</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.atelier.atelier</string>
+	<key>PROJECT_ID</key>
+	<string>atelier-ef966</string>
+	<key>STORAGE_BUCKET</key>
+	<string>atelier-ef966.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:538059969080:ios:4d7aa928e4f00ec23a4ccd</string>
+	<key>DATABASE_URL</key>
+	<string>https://atelier-ef966.firebaseio.com</string>
+</dict>
+</plist>
