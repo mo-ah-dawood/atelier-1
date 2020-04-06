@@ -6,6 +6,7 @@ import 'package:atelier/screens/home/addDress.dart';
 import 'package:atelier/screens/home/atelierUserCenter.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:full_screen_image/full_screen_image.dart';
 import 'package:http/http.dart';
 import 'package:image_fade/image_fade.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -39,13 +40,15 @@ class _MyProductState extends State<MyProduct> {
       bloc.onDressDescripChange(null); 
     for (int i = 0; i < widget.product.images.length; i++)
       images.add(
-                     FadeInImage(
-                                    placeholder:AssetImage('assets/images/placeholder.gif'),
+                     FullScreenWidget(
+                       child: FadeInImage(
+                                      placeholder:AssetImage('assets/images/placeholder.gif'),
 
           image:NetworkImage(widget.product.images[i]),
           height: 350,
           fit: BoxFit.fill,
         ),
+                     ),
       );
   }
 
