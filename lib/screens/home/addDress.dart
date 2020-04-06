@@ -11,6 +11,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class AddDress extends StatefulWidget {
   Product product;
@@ -52,6 +53,12 @@ class _AddDressState extends State<AddDress> {
   List<Widget> dressImagesWidgets = [];
   Container addImageContainer;
   Future getImage(ImageSource source) async {
+    var p =await Permission.storage.request();
+var p2 =await Permission.camera.request();
+var p1 =await Permission.mediaLibrary.request();
+var p4 =await Permission.photos.request();
+var p3 =await Permission.storage.request();
+
     var image = await ImagePicker.pickImage(source: source);
 
     setState(() {
