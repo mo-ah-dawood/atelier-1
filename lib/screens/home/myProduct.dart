@@ -351,7 +351,7 @@ class _MyProductState extends State<MyProduct> {
                                             width: 6,
                                           ),
                                           Text(
-                                          bloc.currentUser().type=="user"?
+                                          widget.product.providerModel.type=="user"?
                                          "${ widget.product.mobile}":
                                             "${widget.product.user_mobile}",
                                             style: TextStyle(
