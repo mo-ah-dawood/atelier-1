@@ -64,8 +64,8 @@ class _MoreState extends State<More> {
                   Container(
                     // image
                     padding: EdgeInsets.only(top: 20, bottom: 20),
-                    height: 230,
-                    width: 400,
+                    height: 180,
+                    width: 180,
                     child: Image.asset('assets/images/more.png'),
                   ),
                   bloc.currentUser().type == "user"

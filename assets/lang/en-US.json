@@ -85,7 +85,7 @@
   "home": {
     "houses": "Fashion Houses",
     "special": "Special ones",
-    "used": "Used clothes"
+    "used": "Acquisition again"
   },
   "payPackage": {
     "membership": "membership",
@@ -215,7 +215,7 @@
   "dressImages":"Dress photos",
   "moneyType":"R.S",
   "delMessage":"Are you sure to delete this product?"
-  ,"allUsed":"Used Clothes"
+  ,"allUsed":"Acquisition again"
   ,"allProviders":"Fashion Houses"
 ,"providerHouse":"Fashion house",
 "n":"user",

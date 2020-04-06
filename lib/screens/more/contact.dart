@@ -20,6 +20,7 @@ class Contact extends StatefulWidget {
 class _ContactState extends State<Contact> {
   @override
   void initState() {
+    typs={0:AppLocalizations.of(context).tr("more.kind")};
     getTyps();
     super.initState();
   }
@@ -106,24 +107,24 @@ getTyps()async{
                       ? Alignment.topRight
                       : Alignment.topLeft,
                   children: <Widget>[
-                    Positioned(
-                      bottom: 0,
-                      left: localCode == "ar" ? 0 : null,
-                      right: localCode == "ar" ? null : 0,
-                      child: Opacity(
-                        opacity: 0.2,
-                        child: Container(
-                            alignment: localCode == "ar"
-                                ? Alignment.bottomLeft
-                                : Alignment.bottomRight,
-                            width: size.width - 50,
-                            height: size.height - 50,
-                            child: Image.asset(
-                              'assets/images/$girle',
-                              fit: BoxFit.fill,
-                            )),
-                      ),
-                    ),
+                    // Positioned(
+                    //   bottom: 0,
+                    //   left: localCode == "ar" ? 0 : null,
+                    //   right: localCode == "ar" ? null : 0,
+                    //   child: Opacity(
+                    //     opacity: 0.2,
+                    //     child: Container(
+                    //         alignment: localCode == "ar"
+                    //             ? Alignment.bottomLeft
+                    //             : Alignment.bottomRight,
+                    //         width: size.width - 50,
+                    //         height: size.height - 50,
+                    //         child: Image.asset(
+                    //           'assets/images/$girle',
+                    //           fit: BoxFit.fill,
+                    //         )),
+                    //   ),
+                    // ),
                     SingleChildScrollView(
                         child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,

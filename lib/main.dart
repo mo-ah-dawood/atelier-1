@@ -314,23 +314,43 @@ class _OpenState extends State<Open> {
         body: Container(
       width: width,
       height: height,
-      child: Column(
-        mainAxisSize: MainAxisSize.max,
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
+      child: Stack(
+        alignment: Alignment.center,
         children: <Widget>[
-          Container(
-            color: backGround,
-            width: 100,
-            height: 100,
-            child: Image.asset('assets/images/logo.png'),
+           Positioned(
+                  bottom: 0,
+                  child: AnimatedOpacity(
+                      duration: mill2Second,
+                      opacity:0.5,
+                      child: Container(
+                          width: bloc.size().width,
+                          height: bloc.size().height,
+                          child: Image.asset(
+                            'assets/images/bg.png',
+                                                      width: bloc.size().width,
+                          height: bloc.size().height,
+
+                            fit: BoxFit.cover,
+                          ))),
+                ),
+          Column(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              Container(
+                width: 100,
+                height: 100,
+                child: Image.asset('assets/images/more.png'),
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 30),
+                child: Theme(
+                    data: ThemeData(accentColor: bumbi),
+                    child: CircularProgressIndicator()),
+              )
+            ],
           ),
-          Padding(
-            padding: EdgeInsets.only(top: 10),
-            child: Theme(
-                data: ThemeData(accentColor: bumbi),
-                child: CircularProgressIndicator()),
-          )
         ],
       ),
     ));

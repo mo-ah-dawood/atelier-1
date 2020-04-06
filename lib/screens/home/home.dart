@@ -1,9 +1,10 @@
-
 import 'package:atelier/blocs/bloc.dart';
 import 'package:atelier/blocs/design.dart';
 import 'package:atelier/blocs/widgets.dart';
 import 'package:atelier/models/homeModel.dart';
 import 'package:atelier/models/productModel.dart';
+import 'package:atelier/screens/login&signUp/payPackage.dart';
+import 'package:atelier/screens/login&signUp/waitForAccept.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:atelier/models/providerModel.dart';
 import 'package:atelier/screens/home/addDress.dart';
@@ -36,22 +37,21 @@ class _HomeState extends State<Home> {
   void _onRefresh() async {
     // monitor network fetch
     Map<String, List> dataOfHome = await refreshHome(context);
-  if(mounted)
-    setState(() {
-      providers = dataOfHome['providers'];
+    if (mounted)
+      setState(() {
+        providers = dataOfHome['providers'];
 
-      special = dataOfHome['special'];
-      used = dataOfHome['used'];
-    });
+        special = dataOfHome['special'];
+        used = dataOfHome['used'];
+      });
     // if failed,use refreshFailed()
     _refreshController.refreshCompleted();
   }
+
   List<Widget> special = [
     LoadingFullScreen(),
   ];
-  List<Widget> used = [
-    LoadingFullScreen()
-  ];
+  List<Widget> used = [LoadingFullScreen()];
   List<Widget> providers = [
     LoadingFullScreen(),
   ];
@@ -88,32 +88,40 @@ class _HomeState extends State<Home> {
                   width: size.width,
                   child: Column(
                     children: <Widget>[
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: <Widget>[
-                          Text(
-                            AppLocalizations.of(context).tr("home.houses"),
-                            style: TextStyle(
-                                color: hint,
-                                fontWeight: FontWeight.w600,
-                                fontSize: 15),
-                          ),
-                          InkWell(
-                            onTap: () {
-                              setState(() {
-                                Navigator.of(context).push(
-                                    MaterialPageRoute(
-                                        builder: (context) => AllProviders()));
-                              });
-                            },
-                            child: SizedBox(
-                              width: 15,
-                              height: 15,
-                              child: Image.asset(
-                                  'assets/images/all_$localCode.png'),
+                      Container(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                        decoration: BoxDecoration(
+                            color: bumbiAccent,
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(10))),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Text(
+                              AppLocalizations.of(context).tr("home.houses"),
+                              style: TextStyle(
+                                  color: bumbi,
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 15),
                             ),
-                          )
-                        ],
+                            InkWell(
+                              highlightColor: Colors.white,
+                              onTap: () {
+                                setState(() {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (context) => PayPAckage()));
+                                });
+                              },
+                              child: SizedBox(
+                                width: 20,
+                                height: 20,
+                                child: Image.asset(
+                                    'assets/images/moreA.png'),
+                              ),
+                            )
+                          ],
+                        ),
                       ),
                       SizedBox(
                         height: 5,
@@ -133,32 +141,40 @@ class _HomeState extends State<Home> {
                   ),
                 ),
                 Container(
-                  height:410,
+                  height: 410,
                   padding: EdgeInsets.symmetric(horizontal: 15),
                   child: Column(
                     children: <Widget>[
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: <Widget>[
-                          Text(
-                            AppLocalizations.of(context).tr("home.special"),
-                            style: TextStyle(
-                                color: hint,
-                                fontWeight: FontWeight.w600,
-                                fontSize: 15),
-                          ),
-                        ],
-                      ),
                       Container(
-                        height: 390,
-                        alignment: Alignment.center,
-                        width: bloc.size().width,
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                        decoration: BoxDecoration(
+                            color: bumbiAccent,
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(10))),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Text(
+                              AppLocalizations.of(context).tr("home.special"),
+                              style: TextStyle(
+                                  color: bumbi,
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 15),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Expanded(
+                        
+                        // alignment: Alignment.center,
+                        // width: bloc.size().width,
                         child: StaggeredGridView.countBuilder(
                             itemCount: special.length,
                             crossAxisCount: 4,
                             staggeredTileBuilder: (int index) =>
                                 new StaggeredTile.count(
-                                    2, index.isEven ? 2.5 : 1.53),
+                                    2, index.isEven ? 2.5 : 1.8),
                             mainAxisSpacing: 4.0,
                             crossAxisSpacing: 4.0,
                             physics: NeverScrollableScrollPhysics(),
@@ -174,35 +190,46 @@ class _HomeState extends State<Home> {
                   width: bloc.size().width,
                   child: Column(
                     children: <Widget>[
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: <Widget>[
-                          Text(
-                            AppLocalizations.of(context).tr("home.used"),
-                            style: TextStyle(
-                                color: hint,
-                                fontWeight: FontWeight.w600,
-                                fontSize: 15),
-                          ),
-                          InkWell(
-                            onTap: () {
-                              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>AllUsedProducts()));
-                            },
-                            child: SizedBox(
-                              width: 15,
-                              height: 15,
-                              child: Image.asset(
-                                  'assets/images/all_$localCode.png'),
+                      Container(
+                                                padding:
+                            EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                        decoration: BoxDecoration(
+                            color: bumbiAccent,
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(10))),
+
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Text(
+                              AppLocalizations.of(context).tr("home.used"),
+                              style: TextStyle(
+                                  color: bumbi,
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 15),
                             ),
-                          )
-                        ],
+                            InkWell(
+                              highlightColor: Colors.white,
+                              onTap: () {
+                                Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) => AllUsedProducts()));
+                              },
+                              child: SizedBox(
+                                width: 20,
+                                height: 20,
+                                child: Image.asset(
+                                    'assets/images/moreA.png'),
+                              ),
+                            )
+                          ],
+                        ),
                       ),
                       SizedBox(
                         height: 5,
                       ),
-                      Container(
-                        width: size.width,
-                        height: 170,
+                      Expanded(
+                        // width: size.width,
+                        // height: 170,
                         child: GridView.count(
                           controller: old,
                           childAspectRatio: 1.2,
@@ -231,7 +258,7 @@ class HouseCard extends StatelessWidget {
   bool fromproviderPage;
   bool mine;
   ProviderModel provider;
-  HouseCard({this.provider, this.fromproviderPage,this.mine,this.product});
+  HouseCard({this.provider, this.fromproviderPage, this.mine, this.product});
   @override
   Widget build(BuildContext context) {
     var data = EasyLocalizationProvider.of(context).data;
@@ -242,11 +269,17 @@ class HouseCard extends StatelessWidget {
         child: InkWell(
           onTap: () {
             product != null
-                ?mine!=null?
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) =>MyProduct(product: product,)))
-                : Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) =>fromproviderPage!=null?ProviderDress(product: product,) :NormalProduct(product: product)))
+                ? mine != null
+                    ? Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => MyProduct(
+                              product: product,
+                            )))
+                    : Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => fromproviderPage != null
+                            ? ProviderDress(
+                                product: product,
+                              )
+                            : NormalProduct(product: product)))
                 : Navigator.of(context).push(MaterialPageRoute(
                     builder: (context) =>
                         ProviderPage(providerModel: provider)));
@@ -260,10 +293,10 @@ class HouseCard extends StatelessWidget {
                   : Alignment.bottomRight,
               children: <Widget>[
                 Container(
-                  child: ClipRRect(
-                      borderRadius: BorderRadius.all(Radius.circular(15)),
-                      child:imageOfCard(product, provider),)
-                ),
+                    child: ClipRRect(
+                  borderRadius: BorderRadius.all(Radius.circular(15)),
+                  child: imageOfCard(product, provider),
+                )),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: <Widget>[
@@ -295,7 +328,8 @@ class HouseCard extends StatelessWidget {
                                     ],
                                   )
                                 : Text(
-                                    provider.name??AppLocalizations.of(context)
+                                    provider.name ??
+                                        AppLocalizations.of(context)
                                             .tr("myProduct.n"),
                                     style:
                                         TextStyle(fontWeight: FontWeight.bold),
@@ -312,27 +346,19 @@ class HouseCard extends StatelessWidget {
     );
   }
 }
-imageOfCard(Product product,ProviderModel provider){
-    try{
-                        return  Container(
-                          constraints: BoxConstraints(minHeight: 10,maxHeight: 500),
-                          child:
-                          FadeInImage(
-                            
-        image:NetworkImage( product != null
-                              ? product.images[0]
-                              : provider.image),
-                              
-        placeholder:AssetImage('assets/images/placeholder.gif'),
-          fit: BoxFit.fill,
-     ),
-                         
-                 
-                         
-            ); }catch(e){
-return print(e);
-                    }
 
-
-                  
+imageOfCard(Product product, ProviderModel provider) {
+  try {
+    return Container(
+      constraints: BoxConstraints(minHeight: 10, maxHeight: 500),
+      child: FadeInImage(
+        image:
+            NetworkImage(product != null ? product.images[0] : provider.image),
+        placeholder: AssetImage('assets/images/placeholder.gif'),
+        fit: BoxFit.fill,
+      ),
+    );
+  } catch (e) {
+    return print(e);
+  }
 }

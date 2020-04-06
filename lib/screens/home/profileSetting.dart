@@ -143,23 +143,23 @@ var p3 =await Permission.storage.request();
               key: scaffold,
               body: Stack(
                 children: <Widget>[
-                  Positioned(
-                    bottom: 0,
-                    left: localCode == "ar" ? 0 : null,
-                    right: localCode == "ar" ? null : 0,
-                    child: Opacity(
-                        opacity: 0.2,
-                        child: Container(
-                            alignment: localCode == "ar"
-                                ? Alignment.bottomLeft
-                                : Alignment.bottomRight,
-                            width: bloc.size().width - 50,
-                            height: bloc.size().height - 50,
-                            child: Image.asset(
-                              'assets/images/$girle',
-                              fit: BoxFit.fill,
-                            ))),
-                  ),
+                  // Positioned(
+                  //   bottom: 0,
+                  //   left: localCode == "ar" ? 0 : null,
+                  //   right: localCode == "ar" ? null : 0,
+                  //   child: Opacity(
+                  //       opacity: 0.2,
+                  //       child: Container(
+                  //           alignment: localCode == "ar"
+                  //               ? Alignment.bottomLeft
+                  //               : Alignment.bottomRight,
+                  //           width: bloc.size().width - 50,
+                  //           height: bloc.size().height - 50,
+                  //           child: Image.asset(
+                  //             'assets/images/$girle',
+                  //             fit: BoxFit.fill,
+                  //           ))),
+                  // ),
                   GestureDetector(
                     onTap: () {
                       FocusScope.of(context).requestFocus(FocusNode());
