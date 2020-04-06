@@ -183,6 +183,7 @@ class _AtelierTextFieldState extends State<AtelierTextField> {
         AnimatedDefaultTextStyle(
           duration: Duration(microseconds: 0),
           style: TextStyle(
+            
               color: widget.error != null ? Colors.red : hint,
               fontWeight: FontWeight.w600,
               fontSize: widget.focusNode.hasPrimaryFocus || widget.error != null
