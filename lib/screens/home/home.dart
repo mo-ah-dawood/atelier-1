@@ -110,7 +110,7 @@ class _HomeState extends State<Home> {
                               onTap: () {
                                 setState(() {
                                   Navigator.of(context).push(MaterialPageRoute(
-                                      builder: (context) => PayPAckage()));
+                                      builder: (context) => AllProviders()));
                                 });
                               },
                               child: SizedBox(
