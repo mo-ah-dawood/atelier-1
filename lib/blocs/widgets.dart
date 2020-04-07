@@ -181,8 +181,9 @@ class _AtelierTextFieldState extends State<AtelierTextField> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         AnimatedDefaultTextStyle(
-          duration: mill0Second,
+          duration: Duration(microseconds: 0),
           style: TextStyle(
+            
               color: widget.error != null ? Colors.red : hint,
               fontWeight: FontWeight.w600,
               fontSize: widget.focusNode.hasPrimaryFocus || widget.error != null

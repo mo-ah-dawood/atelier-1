@@ -9,6 +9,7 @@ import 'package:atelier/screens/home/providerPage.dart';
 import 'package:atelier/screens/home/userFashion.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:full_screen_image/full_screen_image.dart';
 import 'package:image_fade/image_fade.dart';
 import 'package:progress_dialog/progress_dialog.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -30,11 +31,13 @@ class _FashionArticleState extends State<FashionArticle> {
     super.initState();
     loading = ProgressDialog(context, type: ProgressDialogType.Normal);
     for (int i = 0; i < widget.article.images.length; i++)
-      images.add(FadeInImage(
-        placeholder: AssetImage('assets/images/placeholder.gif'),
-        image: NetworkImage(widget.article.images[i]),
-        height: 350,
-        fit: BoxFit.fill,
+      images.add(FullScreenWidget(
+        child: FadeInImage(
+          placeholder: AssetImage('assets/images/placeholder.gif'),
+          image: NetworkImage(widget.article.images[i]),
+          height: 350,
+          fit: BoxFit.fill,
+        ),
       ));
     refreshComments();
 

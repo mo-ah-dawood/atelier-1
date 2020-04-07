@@ -16,6 +16,8 @@ import 'package:image_fade/image_fade.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:permission_handler/permission_handler.dart';
+
 
 class ProfileSetting extends StatefulWidget {
   bool provider;
@@ -62,6 +64,12 @@ class _ProfileSettingState extends State<ProfileSetting> {
   bool loading = false;
 
   Future getImage(ImageSource source) async {
+        var p =await Permission.storage.request();
+var p2 =await Permission.camera.request();
+var p1 =await Permission.mediaLibrary.request();
+var p4 =await Permission.photos.request();
+var p3 =await Permission.storage.request();
+
     var image = await ImagePicker.pickImage(source: source);
 
     setState(() {
@@ -135,23 +143,23 @@ class _ProfileSettingState extends State<ProfileSetting> {
               key: scaffold,
               body: Stack(
                 children: <Widget>[
-                  Positioned(
-                    bottom: 0,
-                    left: localCode == "ar" ? 0 : null,
-                    right: localCode == "ar" ? null : 0,
-                    child: Opacity(
-                        opacity: 0.2,
-                        child: Container(
-                            alignment: localCode == "ar"
-                                ? Alignment.bottomLeft
-                                : Alignment.bottomRight,
-                            width: bloc.size().width - 50,
-                            height: bloc.size().height - 50,
-                            child: Image.asset(
-                              'assets/images/$girle',
-                              fit: BoxFit.fill,
-                            ))),
-                  ),
+                  // Positioned(
+                  //   bottom: 0,
+                  //   left: localCode == "ar" ? 0 : null,
+                  //   right: localCode == "ar" ? null : 0,
+                  //   child: Opacity(
+                  //       opacity: 0.2,
+                  //       child: Container(
+                  //           alignment: localCode == "ar"
+                  //               ? Alignment.bottomLeft
+                  //               : Alignment.bottomRight,
+                  //           width: bloc.size().width - 50,
+                  //           height: bloc.size().height - 50,
+                  //           child: Image.asset(
+                  //             'assets/images/$girle',
+                  //             fit: BoxFit.fill,
+                  //           ))),
+                  // ),
                   GestureDetector(
                     onTap: () {
                       FocusScope.of(context).requestFocus(FocusNode());

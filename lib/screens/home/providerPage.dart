@@ -6,6 +6,7 @@ import 'package:atelier/screens/home/atelierUserCenter.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:full_screen_image/full_screen_image.dart';
 import 'package:image_fade/image_fade.dart';
 import 'home.dart';
 
@@ -46,12 +47,14 @@ class _ProviderPageState extends State<ProviderPage> {
                           width: bloc.size().width,
                           height: 350,
                           child:
-                     FadeInImage(
-                                    placeholder:AssetImage('assets/images/placeholder.gif'),
+                     FullScreenWidget(
+                       child: FadeInImage(
+                                      placeholder:AssetImage('assets/images/placeholder.gif'),
 
-                            image:NetworkImage( widget.providerModel.image),
-                            fit: BoxFit.fill,
-                          ),
+                              image:NetworkImage( widget.providerModel.image),
+                              fit: BoxFit.fill,
+                            ),
+                     ),
                         ),
                         Positioned(
                           right: 20,

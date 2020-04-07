@@ -61,24 +61,24 @@ class _TermsState extends State<Terms> {
                     ? Alignment.topRight
                     : Alignment.topLeft,
                 children: <Widget>[
-                  Positioned(
-                    bottom: 0,
-                    left: localCode == "ar" ? 0 : null,
-                    right: localCode == "ar" ? null : 0,
-                    child: Opacity(
-                      opacity: 0.2,
-                      child: Container(
-                          alignment: localCode == "ar"
-                              ? Alignment.bottomLeft
-                              : Alignment.bottomRight,
-                          width: size.width - 50,
-                          height: size.height - 50,
-                          child: Image.asset(
-                            'assets/images/$girle',
-                            fit: BoxFit.fill,
-                          )),
-                    ),
-                  ),
+                  // Positioned(
+                  //   bottom: 0,
+                  //   left: localCode == "ar" ? 0 : null,
+                  //   right: localCode == "ar" ? null : 0,
+                  //   child: Opacity(
+                  //     opacity: 0.2,
+                  //     child: Container(
+                  //         alignment: localCode == "ar"
+                  //             ? Alignment.bottomLeft
+                  //             : Alignment.bottomRight,
+                  //         width: size.width - 50,
+                  //         height: size.height - 50,
+                  //         child: Image.asset(
+                  //           'assets/images/$girle',
+                  //           fit: BoxFit.fill,
+                  //         )),
+                  //   ),
+                  // ),
                   SingleChildScrollView(
                       child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,

@@ -7,6 +7,7 @@ import 'package:atelier/screens/home/addDress.dart';
 import 'package:atelier/screens/home/home.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:full_screen_image/full_screen_image.dart';
 import 'package:image_fade/image_fade.dart';
 
 class Profile extends StatefulWidget {
@@ -109,11 +110,13 @@ profile(BuildContext context) {
                   child: ClipRRect(
                       borderRadius: BorderRadius.all(Radius.circular(15)),
                       child:
-                     FadeInImage(
-                                    placeholder:AssetImage('assets/images/placeholder.gif'),
+                     FullScreenWidget(
+                       child: FadeInImage(
+                                      placeholder:AssetImage('assets/images/placeholder.gif'),
 
-                        image:NetworkImage(bloc.currentUser().image),
-                      )),
+                          image:NetworkImage(bloc.currentUser().image),
+                        ),
+                     )),
                 ),
               ),
               Text(

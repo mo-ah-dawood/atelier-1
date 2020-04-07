@@ -54,20 +54,21 @@ class _SplachState extends State<Splach> {
               children: <Widget>[
                 Positioned(
                   bottom: 0,
-                  left: localCode == "ar" ? 0 : null,
-                  right: localCode == "ar" ? null : 0,
                   child: AnimatedOpacity(
                       duration: mill2Second,
-                      opacity: start ? 0.2 : 0.0,
+                      opacity: start ? 0.5: 0.0,
                       child: Container(
                           alignment: localCode == "ar"
                               ? Alignment.bottomLeft
                               : Alignment.bottomRight,
-                          width: bloc.size().width - 50,
-                          height: bloc.size().height - 50,
+                          width: bloc.size().width,
+                          height: bloc.size().height,
                           child: Image.asset(
-                            'assets/images/$girle',
-                            fit: BoxFit.fill,
+                            'assets/images/bg.png',
+                                                      width: bloc.size().width,
+                          height: bloc.size().height,
+
+                            fit: BoxFit.cover,
                           ))),
                 ),
                 logo(up, start),
@@ -108,14 +109,14 @@ class _SplachState extends State<Splach> {
 Widget logo(bool up, bool start) {
   return AnimatedPositioned(
     duration: mill1Second,
-    bottom: up ? (bloc.size().height / 2) + 20 : bloc.size().height / 2 - 20,
+    bottom: up ? (bloc.size().height / 2) + 50 : bloc.size().height / 2 - 20,
     child: AnimatedOpacity(
         duration: mill1Second,
         opacity: start ? 1.0 : 0.0,
         child: Container(
           width: 100,
           height: 100,
-          child: Image.asset('assets/images/logo.png'),
+          child: Image.asset('assets/images/more.png'),
         )),
   );
 }
